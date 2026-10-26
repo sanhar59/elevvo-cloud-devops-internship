@@ -1,4 +1,4 @@
-# Task 1: Secure Linux Bastion Host and Process Management
+# Secure Linux Bastion Host and Process Management
 
 ## What I built
 An Ubuntu 24.04 server on AWS EC2 (t3.micro), hardened for SSH access, running a small web service managed by systemd.
