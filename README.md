@@ -19,7 +19,17 @@ An Ubuntu 24.04 server on AWS EC2 (t3.micro), hardened for SSH access, running a
     sudo sshd -T | grep -Ei "passwordauthentication|permitrootlogin|pubkeyauthentication"
 
 ## Evidence
-Screenshots are in the screenshots/ folder.
+ ### 1. SSH hardening: password login and root login refused
+   ![SSH login refused](screenshots/01-ssh-hardening-refused.png)
+
+   ### 2. Effective sshd settings
+   ![sshd effective config](screenshots/02-sshd-effective-config.png)
+
+   ### 3. systemd service lifecycle (stop, start, enabled on boot)
+   ![systemd lifecycle](screenshots/03-systemd-lifecycle.png)
+
+   ### 4. Service running after a reboot
+   ![After reboot](screenshots/04-after-reboot.png)
 
 ## What I learned
 - Key-based SSH is safer than passwords, and extra files in /etc/ssh/sshd_config.d/ can override the main config.
