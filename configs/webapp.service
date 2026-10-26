@@ -1,0 +1,12 @@
+[Unit]
+Description=Simple Web App
+After=network.target
+
+[Service]
+User=sanhar
+WorkingDirectory=/home/sanhar/webapp
+ExecStart=/usr/bin/python3 -m http.server 8000 --bind 127.0.0.1
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
